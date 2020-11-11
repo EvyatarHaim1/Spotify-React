@@ -25,6 +25,11 @@ transition: 200ms color ease-in;
 }
 .sidebarOptionIcon {
     padding-left:10px;
-padding-right:10px;
+    padding-right:10px;
+}
+ p{
+    margin-top: 10px;
+    margin-left: 10px;
+    font-size:14px;
 }`
 
