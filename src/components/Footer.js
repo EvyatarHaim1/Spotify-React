@@ -73,6 +73,8 @@ width: 300px;
     margin-right: 20px;
     object-fit: contain;
 }
+.footerSongInfo > h4 {margin-bottom: 5px;}
+.footerSongInfo > p {font-size: 12px;}
 `
 const FooterCenter = styled.div`
 flex: 0.4;
@@ -81,11 +83,18 @@ color: white;
 display: flex;
 align-items: center;
 justify-content: space-between;
-max-width: 300px;`
+max-width: 300px;
+.footerGreen {color: green;}
+.footerIcon:hover, 
+.footerGreen:hover  {
+    transition: transform 0.2s ease-in-out;
+    transform: scale(1.2) !important;
+}`
 
 const FooterRight = styled.div`
 flex: 0.3;
 display:flex;
 justify-content: space-between;
 align-items: center;
-color: white;`
+color: white;
+* .MuiSlider-root{ color: green;}`
