@@ -17,3 +17,6 @@ Full-Stack Application
 
 ![alt text](https://github.com/EvyatarHaim1/Spotify-React/blob/main/src/assets/images/HomeScreenView.png)
 
+![alt text](https://github.com/EvyatarHaim1/Spotify-React/blob/main/src/assets/images/HomeScreenView2.png)
+
+
