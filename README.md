@@ -12,3 +12,8 @@ Full-Stack Application
 * React Hooks
 * Styled-Components
 *Deploy and hosting in Firebase 
+
+![alt text](https://github.com/EvyatarHaim1/Spotify-React/blob/main/src/assets/images/LoginScreenView.png)
+
+![alt text](https://github.com/EvyatarHaim1/Spotify-React/blob/main/src/assets/images/HomeScreenView.png)
+
