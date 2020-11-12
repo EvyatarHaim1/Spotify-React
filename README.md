@@ -2,6 +2,7 @@ Spotify-React
 
 Full-Stack Application
 
+* App URL - https://spotify-evyatar.web.app/
 * User authentication
 * Spotify API - spotify-web-api-js
 * Login system - by clicking login button in the app it takes you to the real Spotify account login page and then redirect you back to the local endpoint uri with your data once     logged in. 
