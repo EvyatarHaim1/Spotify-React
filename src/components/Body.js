@@ -1,21 +1,29 @@
 import React from 'react';
 import styled from 'styled-components';
 import Header from './Header'
+import {useDataLayerValue} from '../store/DataLayer';
 
 function Body({ spotify }) {
+
+    const [{ discover_weekly }, dispatch] = useDataLayerValue()
+
     return (
         <BODY>
           <Header spotify={spotify}/>
             <div className="bodyInfo">
                 <img 
-                src="https://newjams-images.scdn.co/v2/discover-weekly/aAbca4VNfzWuUCQ_FGiEFA==/bmVuZW5lbmVuZW5lbmVuZQ==/default"
-                alt="" />
+                src={discover_weekly?.images[0].url}
+                alt={discover_weekly?.images[1].url} />
                 <div className="bodyInfoText">
                     <strong>PLAYLIST</strong>
                     <h2>Discover Weekly</h2>
-                    <p>description...</p>
+                    <p>{discover_weekly?.description}</p>
                 </div>
             </div>
+
+            <BodySongs>
+
+            </BodySongs>
         </BODY>
     )
 }
@@ -49,3 +57,5 @@ padding: 30px;
         }
     }
 }`
+
+const BodySongs = styled.div``
