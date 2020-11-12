@@ -1,7 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
-import Header from './Header'
+import Header from './Header';
+import SongRow from './SongRow';
 import {useDataLayerValue} from '../store/DataLayer';
+import PlayCircleFilledIcon from '@material-ui/icons/PlayCircleFilled';
+import FavoriteIcon from '@material-ui/icons/Favorite';
+import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
 
 function Body({ spotify }) {
 
@@ -22,7 +26,14 @@ function Body({ spotify }) {
             </div>
 
             <BodySongs>
-
+               <BodyIcons>
+                  <PlayCircleFilledIcon className="bodyShuffle"/>
+                  <FavoriteIcon fontSize="large"/>
+                  <MoreHorizIcon />
+               </BodyIcons>
+               {discover_weekly?.tracks.items.map(item => (
+                   <SongRow track={item.track} />
+               ))}
             </BodySongs>
         </BODY>
     )
@@ -36,6 +47,7 @@ background: linear-gradient(transparent, rgba(0,0,0,1)) rgb(91, 87, 115);
 height: 100vh;
 color: white;
 padding: 30px;
+overflow-y: overlay;
 .bodyInfo {
     display: flex;
     align-items: flex-end;
@@ -58,4 +70,23 @@ padding: 30px;
     }
 }`
 
-const BodySongs = styled.div``
+const BodySongs = styled.div`
+margin: 20px -30px;
+`
+
+const BodyIcons = styled.div`
+display: flex;
+align-items: center;
+.MuiSvgIcon-root {
+    margin-right: 20px; 
+}
+.bodyShuffle {
+    font-size: 80px !important; 
+    margin-left: 50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.bodyShuffle:hover {
+    transition: 100ms transform ease-in;
+    transform: scale(1.08);
+}`
