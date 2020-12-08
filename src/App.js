@@ -2,7 +2,7 @@ import React, {useState,useEffect} from 'react';
 import './App.css';
 import Login from './components/Login';
 import Player from './components/Player';
-import { getTokenFromUrl } from './spotify';
+import { getTokenFromResponse } from "./spotify";
 import SpotifyWebApi from 'spotify-web-api-js';
 import {useDataLayerValue} from './store/DataLayer';
 
@@ -13,7 +13,7 @@ function App() {
    // Run code based on a given condition
    useEffect(() => {
 
-    const hash = getTokenFromUrl()
+    const hash = getTokenFromResponse();
     window.location.hash = "";
     const _token = hash.access_token;
 
